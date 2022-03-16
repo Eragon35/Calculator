@@ -16,9 +16,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        outputTextView = findViewById(R.id.textView2)
     }
 
-    fun onDigit(view: View)
+    fun addDigit(view: View)
     {
         if(stateError)
         {
@@ -30,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         lastNumaric=true
     }
 
-    fun onDecimalPoint(view: View)
+    fun addPoint(view: View)
     {
         if(lastNumaric && !stateError && !lastDot)
         {
@@ -40,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun onOperator (view: View)
+    fun addSign (view: View)
     {
         if(lastNumaric && !stateError)
         {
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun onClear(view: View)
+    fun clear(view: View)
     {
         this.outputTextView.text= ""
         lastNumaric=false
@@ -59,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         lastDot=false
     }
 
-    fun onEqual(view: View)
+    fun result(view: View)
     {
         if(lastNumaric && !stateError)
         {

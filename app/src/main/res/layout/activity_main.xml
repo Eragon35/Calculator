@@ -31,17 +31,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <TableRow
+            android:id="@+id/show"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center">
+
+
 
             <Button
                 android:id="@+id/seven"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="7" />
 
             <Button
@@ -49,7 +52,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="8" />
 
             <Button
@@ -57,7 +60,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="9" />
 
             <Button
@@ -65,7 +68,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onOperator"
+                android:onClick="addSign"
                 android:text="/" />
         </TableRow>
 
@@ -80,7 +83,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="4" />
 
             <Button
@@ -88,7 +91,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="5" />
 
             <Button
@@ -96,7 +99,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="6" />
 
             <Button
@@ -104,7 +107,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onOperator"
+                android:onClick="addSign"
                 android:text="*" />
         </TableRow>
 
@@ -119,7 +122,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="1" />
 
             <Button
@@ -127,7 +130,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="2" />
 
             <Button
@@ -135,7 +138,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="3" />
 
             <Button
@@ -143,7 +146,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onOperator"
+                android:onClick="addSign"
                 android:text="-" />
         </TableRow>
 
@@ -158,7 +161,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDecimalPoint"
+                android:onClick="addPoint"
                 android:text="." />
 
             <Button
@@ -166,7 +169,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onDigit"
+                android:onClick="addDigit"
                 android:text="0" />
 
             <Button
@@ -174,7 +177,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onClear"
+                android:onClick="clear"
                 android:text="C" />
 
             <Button
@@ -182,7 +185,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onOperator"
+                android:onClick="addSign"
                 android:text="+" />
         </TableRow>
 
@@ -196,7 +199,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onEqual"
+                android:onClick="result"
                 android:text="=" />
         </TableRow>
     </TableLayout>
